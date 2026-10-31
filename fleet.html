@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VCT Fleet - Live Position</title>
+<style>
+  :root{--olive:#5C6B35;--gold:#DCC65F;--ink:#1f2418;--muted:#6b705f;--line:#e6e3d6;--bg:#ffffff}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--bg);font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)}
+  .wrap{padding:20px 24px 24px}
+  .head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:2px solid var(--gold);padding-bottom:10px;margin-bottom:18px}
+  .head h1{margin:0;font-size:20px;letter-spacing:.08em;text-transform:uppercase;color:var(--olive);font-weight:700}
+  .head h1 span{color:var(--muted);font-weight:400;letter-spacing:.02em;text-transform:none;font-size:15px;margin-left:8px}
+  .live{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px;white-space:nowrap}
+  .dot{width:8px;height:8px;border-radius:50%;background:#3aa655;box-shadow:0 0 0 3px rgba(58,166,85,.18)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .card{border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;background:var(--olive);color:#fff}
+  .name{font-size:17px;font-weight:700;letter-spacing:.04em}
+  .meta{font-size:12px;opacity:.85;margin-top:2px}
+  .btn{flex:none;font-size:12px;font-weight:600;text-decoration:none;color:var(--ink);background:var(--gold);padding:7px 12px;border-radius:6px}
+  iframe{display:block;width:100%;height:420px;border:0}
+  @media (max-width:760px){.grid{grid-template-columns:1fr}.wrap{padding:16px}.head h1 span{display:block;margin:4px 0 0}}
+</style></head>
+<body><div class="wrap">
+  <div class="head">
+    <h1>Our Fleet<span>Live position</span></h1>
+    <div class="live"><span class="dot"></span>AIS live tracking</div>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="bar"><div><div class="name">MV TULIPS</div><div class="meta">IMO 1093169 · General Cargo</div></div>
+        <a class="btn" href="https://www.marinetraffic.com/en/ais/details/ships/imo:1093169" target="_blank" rel="noopener">MarineTraffic ↗</a></div>
+      <iframe src="tulips.html" title="MV TULIPS live position" loading="lazy"></iframe>
+    </div>
+    <div class="card">
+      <div class="bar"><div><div class="name">MV ORCHIDS</div><div class="meta">IMO 1093171 · General Cargo</div></div>
+        <a class="btn" href="https://www.marinetraffic.com/en/ais/details/ships/imo:1093171" target="_blank" rel="noopener">MarineTraffic ↗</a></div>
+      <iframe src="orchids.html" title="MV ORCHIDS live position" loading="lazy"></iframe>
+    </div>
+  </div>
+</div></body></html>
